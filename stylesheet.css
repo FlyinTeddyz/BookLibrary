@@ -1,4 +1,12 @@
-.container-fluid {
+.title {
+    padding: 1em;
+}
+
+.form-content {
     padding: 5vh;
     max-width: 960px;
+}
+
+.card {
+    margin-bottom: 20px;
 }
