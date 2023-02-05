@@ -4,69 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Library</title>
+    <title>Your Book Library</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./stylesheet.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
-
-    <!-- Book Input Form -->
-    <div class="container-fluid text-center">
-        <form>
-            <div class="row g-3"> 
-                <div class="formInputs col-lg-6 col-md-5">
-                    <label for="bookTitle">Book Title</label>
-                    <input class="form-control"  type="text" id="title" name="title" placeholder="Book Title" required>
+    <div class="main-content">
+        <!-- Nav Bar -->
+        <section class="title">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">Your Book Library</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://books.google.com/">Find Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Sign In</a>
+                    </li>
+                    </ul>
                 </div>
-
-                <div class="formInputs col-lg-6 col-md-5">
-                    <label for="author">Author</label>
-                    <input class="form-control"  type="text" id="author" name="author" placeholder="Author" required>
                 </div>
+            </nav>
+        </section>
 
-                <div class="formInputs col-lg-6 col-md-5">
-                    <label for="pages">Pages</label>
-                    <input class="form-control"  type="number" id="pages" name="pages" placeholder="Number Of Pages" min="1" max="22,400" required>
+        <!-- Book Input Form -->
+        <div class="form-content container-fluid text-center">
+            <form>
+                <div class="row g-3"> 
+                    <div class="formInputs col-lg-6 col-md-5">
+                        <label for="bookTitle">Book Title</label>
+                        <input class="form-control"  type="text" id="title" name="title" placeholder="Book Title" required>
+                    </div>
+
+                    <div class="formInputs col-lg-6 col-md-5">
+                        <label for="author">Author</label>
+                        <input class="form-control"  type="text" id="author" name="author" placeholder="Author" required>
+                    </div>
+
+                    <div class="formInputs col-lg-6 col-md-5">
+                        <label for="pages">Pages</label>
+                        <input class="form-control"  type="number" id="pages" name="pages" placeholder="Number Of Pages" min="1" max="22,400" required>
+                    </div>
+
+                    <div class="formInputs col-lg-6 col-md-5">
+                        <label for="ifRead">Have you read this?</label>
+                        <select class="form-select" name="ifRead" id="read">
+                            <option selected hidden>Have you read this book?</option>
+                            <option value="read">Read</option>
+                            <option value="unread">Unread</option>
+                        </select>
+                    </div>
+
+                    <div class="d-grid col-6 mx-auto" >
+                        <button class="addBookBtn btn btn-outline-secondary .bg-gradient" type="submit">Add Book</button>
+                    </div>
                 </div>
+            </form>
+        </div>
 
-                <div class="formInputs col-lg-6 col-md-5">
-                    <label for="ifRead">Have you read this?</label>
-                    <select class="form-select" name="ifRead" id="read">
-                        <option selected hidden>Have you read this book?</option>
-                        <option value="read">Read</option>
-                        <option value="unread">Unread</option>
-                    </select>
+        <!-- Book Information Display -->
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 id="bookTitle" class="card-title">The Hobbit</h5>
+                            <h6 id="bookPages" class="card-subtitle mb-2 text-muted">304</h6>
+                            <p id="bookAuthor" class="card-text">J.R.R Tolkien</p>
+                            <div class="cardIfRead">
+                                <select>
+                                    <option value="read">Read</option>
+                                    <option value="unread">Unread</option>
+                                </select>
+                            </div>
+                            <a href="#" class="card-link">Remove</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="d-grid col-6 mx-auto" >
-                    <button class="addBookBtn btn btn-outline-secondary" type="submit">Add Book</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    <!-- Book Information Display -->
-    <section class="bookCards">
-        <div class="cardContent">
-            <div class="cardTitle">
-                <h2>The Hobbit</span>
-            </div>
-            <div class="cardAuthor">
-                <h3>J.R.R Tolkien</span>
-            </div>
-            <div class="cardPages">
-                <h3>295</span>
-            </div>
-            <div class="cardIfRead">
-                <select>
-                    <option value="read">Read</option>
-                    <option value="unread">Unread</option>
-                </select>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- JS Script -->
     <script src="./script.js"></script>
