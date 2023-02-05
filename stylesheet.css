@@ -3,16 +3,28 @@ body,
 .main-container {
     height: 100%;
     background:  #eae7dc;
+    font-family: 'Bilbo', cursive;
+}
+
+.navbar-brand {
+    font-size: 40px;
 }
 
 .title {
     padding: 0.5em;
     background-color: #8e8d8a;
+    font-size: 30px;
 }
 
 .form-content {
     padding: 5vh;
     max-width: 960px;
+    font-size: 30px;
+}
+
+.form-control,
+.form-select {
+    font-size: 25px;
 }
 
 .addBookBtn:hover {
@@ -27,8 +39,45 @@ body,
     background-color: #d8c3a5;
     border: 1px solid #8e8d8a ;
     border-radius: 3px;
-    width: 100px;
+    width: 120px;
 }
 .card {
     margin-bottom: 20px;
+    border: 5px solid #d8c3a5;
+    background-color: #e98074;
+    font-size: 25px;
+}
+
+.cardIfRead {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.card-link:hover {
+    border: 3px solid #e85a4f;
+    border-radius: 10px;
+    background-color: #e85a4f;
+}
+
+.card-link:active {
+    border: 3px solid #e98074;
+    border-radius: 10px;
+    background-color: #e98074;
+}
+
+.card-link {
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 300;
+    text-decoration: none;
+    border: 3px solid #d8c3a5;
+    background-color:#d8c3a5;
+    border-radius: 10px;
+    color: black;
+}
+
+.card-title,
+.card-subtitle,
+.card-text {
+    font-size: 25px;
 }

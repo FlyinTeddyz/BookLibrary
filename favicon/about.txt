@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Bilbo
+- Font Author: Copyright 2011 The Bilbo Project Authors (https://github.com/googlefonts/bilbo)
+- Font Source: http://fonts.gstatic.com/s/bilbo/v20/o-0EIpgpwWwZ210hpIRz4wxE.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
