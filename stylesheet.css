@@ -11,7 +11,7 @@ body,
 }
 
 .title {
-    padding: 0.5em;
+    padding: 0em 3.5em 0em;
     background-color: #8e8d8a;
     font-size: 30px;
 }
@@ -80,4 +80,8 @@ body,
 .card-subtitle,
 .card-text {
     font-size: 25px;
+}
+
+.card-title {
+    text-decoration: underline black;
 }
