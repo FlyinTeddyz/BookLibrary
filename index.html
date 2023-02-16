@@ -49,26 +49,26 @@
 
         <!-- Book Input Form -->
         <div class="form-content container-fluid text-center">
-            <form>
+            <form id="myForm">
                 <div class="row g-3"> 
                     <div class="formInputs col-lg-6 col-md-5">
                         <label for="bookTitle">Book Title</label>
-                        <input class="form-control"  type="text" id="title" name="title" placeholder="Book Title" required>
+                        <input class="form-control"  type="text" id="bookTitle" name="title" placeholder="Book Title" required>
                     </div>
 
                     <div class="formInputs col-lg-6 col-md-5">
                         <label for="author">Author</label>
-                        <input class="form-control"  type="text" id="author" name="author" placeholder="Author" required>
+                        <input class="form-control"  type="text" id="bookAuthor" name="author" placeholder="Author" required>
                     </div>
 
                     <div class="formInputs col-lg-6 col-md-5">
                         <label for="pages">Pages</label>
-                        <input class="form-control"  type="number" id="pages" name="pages" placeholder="Number Of Pages" min="1" max="22,400" required>
+                        <input class="form-control"  type="number" id="bookPages" name="pages" placeholder="Number Of Pages" min="1" max="22,400" required>
                     </div>
 
                     <div class="formInputs col-lg-6 col-md-5">
                         <label for="ifRead">Have you read this?</label>
-                        <select class="form-select" name="ifRead" id="read">
+                        <select class="form-select" name="ifRead">
                             <option class="form-control" selected hidden>Have you read this book?</option>
                             <option class="form-control" value="read">Read</option>
                             <option class="form-control" value="unread">Unread</option>
@@ -76,7 +76,7 @@
                     </div>
 
                     <div class="col-6 mx-auto" >
-                        <button class="addBookBtn justify-content-center" type="submit">Add Book</button>
+                        <button class="addBookBtn justify-content-center" type="button" onclick="myFormData();clearInput()">Add Book</button>
                     </div>
                 </div>
             </form>
@@ -88,16 +88,31 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h5 id="bookTitle" class="card-title">The Hobbit</h5>
-                            <h6 id="bookPages" class="card-subtitle mb-2 text-muted"><span>Pages:</span> 304</h6>
-                            <p id="bookAuthor" class="card-text">J.R.R Tolkien</p>
-                            <div class="cardIfRead">
+                            <h5 id="title" class="card-title">The Hobbit</h5>
+                            <p id="author" class="card-text">J.R.R Tolkien</p>
+                            <h6 id="pages" class="card-subtitle mb-2 text-muted"><span>Pages:</span> 304</h6>
+                            <div id="ifRead" class="cardIfRead">
                                 <select>
                                     <option value="read">Read</option>
                                     <option value="unread">Unread</option>
                                 </select>
                                 <a href="#" class="card-link">Remove</a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="title" class="card-title">The Hobbit</h5>
+                        <p id="author" class="card-text">J.R.R Tolkien</p>
+                        <h6 id="pages" class="card-subtitle mb-2 text-muted"><span>Pages:</span> 304</h6>
+                        <div id="ifRead" class="cardIfRead">
+                            <select>
+                                <option value="read">Read</option>
+                                 <option value="unread">Unread</option>
+                            </select>
+                            <a href="#" class="card-link">Remove</a>
                         </div>
                     </div>
                 </div>
