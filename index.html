@@ -49,7 +49,7 @@
 
         <!-- Book Input Form -->
         <div class="form-content container-fluid text-center">
-            <form id="dataForm" onclick="myFormData(); clearInput()">
+            <form id="myForm">
                 <div class="row g-3"> 
                     <div class="formInputs col-lg-6 col-md-5">
                         <label for="bookTitle">Book Title</label>
@@ -76,7 +76,7 @@
                     </div>
 
                     <div class="col-6 mx-auto" >
-                        <button class="addBookBtn justify-content-center" type="button">Add Book</button>
+                        <button class="addBookBtn justify-content-center" type="button" onclick="myFormData();clearInput()">Add Book</button>
                     </div>
                 </div>
             </form>
